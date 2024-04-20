@@ -32,4 +32,4 @@ If you need to change the sensor configuration, I advise you to immediately look
 For this sensor (by default), positioning occurs by reading data from 9 degrees (along the XYZ axes: 3 accelerometers, 3 gyroscopes, 3 magnetometers). Before calibrating the magnetometer, the angle oZ always gave the same value. After calibration, the oZ angle works adequately UNTIL ANY sharp linear shock (~ 1g) of the sensor. I don’t know whether it’s a marriage or not. I strongly advise you to forget about the magnetometer and IMMEDIATELY switch the sensor by 6 degrees.
 
 ## 3 Another version
-In addition, there is a [repository](https://external.ink?to=https://github.com/LiDline/witmotion_WT901BLECL_py), where this web application is implemented in python and plotly dash.
+In addition, there is a [repository](https://external.ink?to=https://github.com/Silky-Thrower/witmotion_WT901BLECL_py), where this web application is implemented in python and plotly dash.
