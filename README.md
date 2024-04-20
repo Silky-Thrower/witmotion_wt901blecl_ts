@@ -1,5 +1,5 @@
 # WITMOTION WT901BLECL
-Here is a small web application for using the WT901BLECL sensor (via USB and bluetooth) using react and TypeScript. All information about the sensor is located [here](https://github.com/WITMOTION/WT901BLECL). In addition to this documentation, I advise you to look at the documentation for the sensor used in the sensor [WT901](https://images-na.ssl-images-amazon.com/images/I/B11fVGszLsS.pdf).
+Here is a small web application for using the WT901BLECL sensor (via USB and bluetooth) using react and TypeScript. All information about the sensor is located [here](https://external.ink?to=https://github.com/WITMOTION/WT901BLECL). In addition to this documentation, I advise you to look at the documentation for the sensor used in the sensor [WT901](https://images-na.ssl-images-amazon.com/images/I/B11fVGszLsS.pdf).
 
 ## 1 Start the program
 The program is launched via npm. The application will be available in the browser via the link: http://127.0.0.1:3000/.
