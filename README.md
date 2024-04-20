@@ -1,35 +1,35 @@
 # WITMOTION WT901BLECL
-Здесь представлено небольшое web-приложение для использования датчика WT901BLECL (через USB и bluetooth) средствами react и TypeScript. Вся информация о датчике находится [тут](https://github.com/WITMOTION/WT901BLECL). Помимо этой документации, советую посмотреть документацию на используемый в датчике сенсор [WT901](https://images-na.ssl-images-amazon.com/images/I/B11fVGszLsS.pdf).
+Here is a small web application for using the WT901BLECL sensor (via USB and bluetooth) using react and TypeScript. All information about the sensor is located [here](https://github.com/WITMOTION/WT901BLECL). In addition to this documentation, I advise you to look at the documentation for the sensor used in the sensor [WT901](https://images-na.ssl-images-amazon.com/images/I/B11fVGszLsS.pdf).
 
-## 1 Запуск программы
-Запуск программы осуществляется через npm. Приложение будет доступно в браузере по ссылке: http://127.0.0.1:3000/. 
+## 1 Start the program
+The program is launched via npm. The application will be available in the browser via the link: http://127.0.0.1:3000/.
 ```
 npm start
 ```
 
-Для подключения через Bluetooth на Linux проверьте доступен/включен ли в Вашем браузере **Web Bluetooth API**. Для этого Вы можете воспользоваться следующими шагами:
+To connect via Bluetooth on Linux, check if the **Web Bluetooth API** is available/enabled in your browser. To do this you can use the following steps:
 
-1. Откройте новую вкладку в браузере.
-2. В адресной строке введите "chrome://flags" (для Chrome) или "about:config" (для Firefox).
-3. Ищите параметр "Web Bluetooth" и убедитесь, что он включен (заменить default/disable на enable).
-4. Затем введите "chrome://bluetooth-internals" (для Chrome) или "about:bluetooth" (для Firefox).
-5. Если вы видите раздел "Devices" и "Services", значит, ваш браузер поддерживает Web Bluetooth API.
+1. Open a new tab in your browser.
+2. In the address bar, enter "chrome://flags" (for Chrome) or "about:config" (for Firefox).
+3. Look for the "Web Bluetooth" parameter and make sure it is enabled (replace default/disable with enable).
+4. Then enter "chrome://bluetooth-internals" (for Chrome) or "about:bluetooth" (for Firefox).
+5. If you see the "Devices" and "Services" section, then your browser supports the Web Bluetooth API.
 
-Если вы используете другой браузер, Вы можете проверить список поддерживаемых браузеров на сайте Web Bluetooth Community Group.
+If you are using a different browser, you can check the list of supported browsers on the Web Bluetooth Community Group site.
  
-## 2 Замечания
+## 2 Notes
 
-### 2.1 Документация
-Если Вам необходимо изменить конфигурацию датчика, то советую сразу смотреть на документацию встроенного сенсора [WT901](https://images-na.ssl-images-amazon.com/images/I/B11fVGszLsS.pdf). В "родной" документации много чего не хватает.
+### 2.1 Documentation
+If you need to change the sensor configuration, I advise you to immediately look at the documentation of the built-in sensor [WT901](https://images-na.ssl-images-amazon.com/images/I/B11fVGszLsS.pdf). The "native" documentation lacks a lot of things.
 
-### 2.2 Калибровка датчика
+### 2.2 Sensor calibration
 
-1. Калибровка акселерометра и гироскопа происходит в течение 3-х секунд после отправки команды (никаких сложностей, просто не трогайте его).
-2. Калибровка магнитометра представляет из себя вращение датчика вокруг своих осей по 3 раза (см. [видео](https://youtu.be/smi2uePvC-Q?t=104))
+1. Calibration of the accelerometer and gyroscope occurs within 3 seconds after sending the command (no difficulties, just don’t touch it).
+2. Magnetometer calibration involves rotating the sensor around its axes 3 times (see [video](https://youtu.be/smi2uePvC-Q?t=104))
 
-### 2.3 Сложности
+### 2.3 Difficulties
 
-У данного датчика (по умолчанию) позиционирование происходит путём считывания данных с 9-ти степеней (по осям XYZ: 3 акселерометра, 3 гироскопа, 3 магнитометра). До калибровки магнитометра угол oZ всегда давал одно значение. После калибровки угол oZ работает адекватно ДО ЛЮБОГО резкого линейного толчка (~ 1g) датчика. Брак это или нет, мне не известно. Настоятельно советую забыть про магнитометр и СРАЗУ переключать датчик на 6 степеней.
+For this sensor (by default), positioning occurs by reading data from 9 degrees (along the XYZ axes: 3 accelerometers, 3 gyroscopes, 3 magnetometers). Before calibrating the magnetometer, the angle oZ always gave the same value. After calibration, the oZ angle works adequately UNTIL ANY sharp linear shock (~ 1g) of the sensor. I don’t know whether it’s a marriage or not. I strongly advise you to forget about the magnetometer and IMMEDIATELY switch the sensor by 6 degrees.
 
-## 3 Другая версия
-Помимо этого, существует [репозиторий](https://github.com/LiDline/witmotion_WT901BLECL_py), где данное web-приложение реализовано на python и plotly dash.
+## 3 Another version
+In addition, there is a [repository](https://github.com/LiDline/witmotion_WT901BLECL_py), where this web application is implemented in python and plotly dash.
